@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyDemo1</string>
+    <string name="Time">Time</string>
+    <string name="unknown">--</string>
+    <string name="Prob">Distance</string>
+    <string name="Detect">Detect</string>
+    <string name="failed_to_create_classifier">Failed to create classifier.</string>
+    <string name="no_pict">Can not find a picture.</string>
+</resources>
