@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.tv_time)TextView mTvTime;
     @BindView(R.id.tv_probability)TextView mTvProbability;
+    @BindView(R.id.tv_sameOrnot)TextView mSame;
     @BindView(R.id.iv_1) ImageView imageView1;
     @BindView(R.id.iv_2) ImageView imageView2;
     @BindView(R.id.iv_new)ImageView imageViewNew;
@@ -140,7 +141,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 currentLabel1 = label[arg2];
-                //设置显示当前选择的项
                 Log.i(TAG,"Current Selected1:"+currentLabel1);
                 arg0.setVisibility(View.VISIBLE);
                 initPicture(currentLabel1,1);
@@ -160,7 +160,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> arg0, View arg1, int arg2, long arg3) {
                 currentLabel2 = label[arg2];
-                //设置显示当前选择的项
                 Log.i(TAG,"Current Selected2:"+currentLabel2);
                 arg0.setVisibility(View.VISIBLE);
                 initPicture(currentLabel2,2);
@@ -194,5 +193,6 @@ public class MainActivity extends AppCompatActivity {
     {
         mTvTime.setText(String.format("%1$d ms", result.getTimeCost()));
         mTvProbability.setText(String.valueOf(result.getProbability()));
+        mSame.setText(String.valueOf(result.getmSame()));
     }
 }

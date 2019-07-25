@@ -99,6 +99,25 @@
             android:layout_width="wrap_content"
             />
 
+        <TableRow>
+            <TextView
+                android:id="@+id/tv_same"
+                android:textSize="12pt"
+                android:textColor="@android:color/black"
+                android:text="@string/same"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/tv_sameOrnot"
+                android:textSize="12pt"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/unknown"
+                android:gravity="center"
+                tools:text="Yes"
+                />
+        </TableRow>
+
 
 
 

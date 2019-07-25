@@ -6,6 +6,8 @@ import android.util.Log;
 public class Result {
     private final long mTime;
     private final float mProbability;
+    private final String mSame;
+    private final double threshhold = 0.5;
     private static final String TAG = "Dolphin";
 
 
@@ -14,7 +16,7 @@ public class Result {
 //        mProbability = result[mNumber];
         mTime = timeCost;
         mProbability = result[0];
-
+        mSame = setSameOrNot(mProbability);
     }
 
     public long getTimeCost() {
@@ -24,6 +26,8 @@ public class Result {
     public float getProbability() {
         return mProbability;
     }
+
+    public String getmSame(){return mSame;}
 
 
     private static int argmax(float[] probs) {
@@ -37,5 +41,9 @@ public class Result {
             }
         }
         return maxIdx;
+    }
+
+    private String setSameOrNot(float probs){
+        return probs>threshhold?"No":"Yes";
     }
 }
